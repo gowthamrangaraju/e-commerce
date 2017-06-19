@@ -141,7 +141,7 @@ function isAlphanumeric(elem, helperMsg) {
                     <div class="col-md-offset-4 col-md-4" id="box">
                       <h2>PRODUCT FORM</h2>
                          <hr>
-                             <form class="form-horizontal" action="newproduct" method="post" id="contact_form" onsubmit="return formRegister()">
+                             <form class="form-horizontal" action="newproduct" method="post" id="contact_form" onsubmit="return formRegister()" enctype="multipart/form-data">
                                     <fieldset>
                                         <!-- Form Name -->
 
@@ -216,6 +216,16 @@ function isAlphanumeric(elem, helperMsg) {
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     <textarea class="form-control" name="productreview" placeholder="productreview" id="productreview"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                                                    <input name="image" placeholder="upload-image" class="form-control" id="image" type="file">
                                                 </div>
                                             </div>
                                         </div>

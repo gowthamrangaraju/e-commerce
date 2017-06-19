@@ -37,8 +37,8 @@ public class CustomerController {
 	public String newCustomer(@ModelAttribute Customer customer,Model model){
 		String message;
 		if(customerDAO.isAllReadyRegister(customer.getCustomerEmail())){
-			message="Hiiii";
-			model.addAttribute("message","Entered Email id already exist you have to login first");
+			message="Entered Email id already exist you have to login first";
+			
 		}
 		else{
 		customer.setEnabled(true);

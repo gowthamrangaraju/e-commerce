@@ -60,7 +60,7 @@ h2{
                                             </div>
                                         </div>
 
-
+												${message}
                                         <div class="form-group">
 
                                             <div class="col-md-12">

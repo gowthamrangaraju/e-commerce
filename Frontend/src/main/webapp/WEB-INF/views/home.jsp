@@ -44,6 +44,9 @@
 
 </c:if>
 
+<c:if test="${isuserClickedLoginButton == 'true'}">
+<%@ include file="login.jsp" %>
+</c:if>
 
 
 

@@ -236,7 +236,7 @@ function isAlphanumeric(elem, helperMsg) {
                                         <div class="form-group">
 
                                             <div class="col-md-12">
-                                            ${message}
+                                            
                                                 <button type="submit" name="Submit" class="btn btn-warning pull-right" value="Submit Form" >SUBMIT  <span class="glyphicon glyphicon-send"></span></button>
                                             </div>
                                         </div>

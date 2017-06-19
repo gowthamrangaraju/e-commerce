@@ -8,10 +8,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.niit.backend.DAO.ProductDAO;
-import com.niit.backend.model.Category;
 import com.niit.backend.model.Product;
+import com.niit.frontend.util.Fileutil;
 
 @Controller
 public class ProductController {
@@ -29,12 +30,11 @@ public class ProductController {
 	
 	
 	@RequestMapping("newproduct")
-	public String newProduct(@ModelAttribute Product product){
-		
-		
+	public String newProduct(@ModelAttribute Product product, @RequestParam("image") MultipartFile file){
 		
 		productDAO.insertProduct(product);
-		
+		String path="C://Users/GOWTHAM RAJU/WORKSPACE/Frontend/src/main/webapp/WEB-INF/resources/images/product/";
+		Fileutil.upload(path, file, product.getProductId()+".jpg");
 		return "redirect:viewproductPage";
 	}
 	
@@ -46,7 +46,7 @@ public class ProductController {
 		return "adminlogin";
 	}
 	
-	@RequestMapping("deleteProduct")
+	@RequestMapping("deleteProduct")  
 	public String deleteProduct(@RequestParam(value = "productId") String id, Model model){
 		productDAO.deleteProduct(id);
 		
